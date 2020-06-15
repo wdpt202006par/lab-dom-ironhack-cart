@@ -1,9 +1,22 @@
 // ITERATION 1
 
 function updateSubtotal(product) {
-  console.log('Calculating subtotal, yey!');
+  
+	//... your code goes here
+	// Step 1 & 2
+	const price =
+	const quantity =
 
-  //... your code goes here
+	// Step 3
+	const subtotalPrice =
+
+	// Step 4
+	const subtotal =
+
+	// Step 5
+	subtotal.innerHTML =
+
+	console.log('Calculating subtotal, yey!');
 }
 
 function calculateAll() {
@@ -14,7 +27,8 @@ function calculateAll() {
   // end of test
 
   // ITERATION 2
-  //... your code goes here
+	//... your code goes here
+	const allSubtotal =
 
   // ITERATION 3
   //... your code goes here

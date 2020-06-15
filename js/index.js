@@ -28,7 +28,7 @@ function calculateAll() {
 
   // ITERATION 2
 	//... your code goes here
-	const allSubtotal =
+	// const allSubtotal =
 
   // ITERATION 3
   //... your code goes here

@@ -2,24 +2,42 @@
 
 function updateSubtotal(product) {
   console.log('Calculating subtotal, yey!');
-
-  //... your code goes here
+//récupérer le prix 
+var price = product.querySelector('.price span').innerText;
+console.log(price);
+//récupérer la quantité
+var quantity = product.querySelector('.quantity input').value;
+console.log (quantity);
+//Multiplier quantité par prix
+var result = price * quantity;
+// pointer vers la classe à modifier
+var subtotal = product.querySelector ('.subtotal span');
+return subtotal.innerHTML = result;
 }
+
+ // ITERATION 2
 
 function calculateAll() {
-  // code in the following two lines is added just for testing purposes.
-  // it runs when only iteration 1 is completed. at later point, it can be removed.
-  const singleProduct = document.querySelector('.product');
-  updateSubtotal(singleProduct);
-  // end of test
-
-  // ITERATION 2
-  //... your code goes here
-
+  // pointer tout les produits 
+  const allProduct = document.querySelectorAll('.product');
+  // basculer en tableau avec spread operator et faire une boucle dans le tableau pour récupérer les subtotaux 
+  [...allProduct].forEach (function(el){
+  updateSubtotal(el);
+  });
+  
   // ITERATION 3
-  //... your code goes here
+  //recuperer tous les subtotaux 
+  const allsubtotal = document.querySelectorAll('.subtotal span');
+  console.log(allsubtotal);
+  // on pointe vers l'endroit ou on veut mettre le total (inner.text ne fonctionne pas !)
+ const total = document.querySelector('#total-value span');
+  //Addition des allsubtotaux
+  var add = 0;
+  [...allsubtotal].forEach (function(el){
+    add += Number(el.innerText);
+  });
+ total.innerText = add
 }
-
 // ITERATION 4
 
 function removeProduct(event) {

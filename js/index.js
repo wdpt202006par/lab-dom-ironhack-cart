@@ -50,16 +50,26 @@ function removeProduct(event) {
 }
 
 
-
-
 // ITERATION 5
 
 function createProduct() {
-  //... your code goes here
+  const buttonCreate = document.getElementById('create');
+  buttonCreate.onclick = function() {
+    let tbody = document.getElementById('cart').tBodies[0];
+    nbOfTrs = tbody.getElementsByTagName("tr").length;
+
+    console.log(tbody);
+    let newRow = tbody.insertRow(nbOfTrs);
+    newRow.insertCell(0)
+    
+    //let createProducts = document.createElement('product');
+    //document.body.appendChild(createProducts);
+  }
 }
 
 window.addEventListener('load', () => {
   const calculatePricesBtn = document.getElementById('calculate');
   calculatePricesBtn.addEventListener('click', calculateAll);
   removeProduct();
+  createProduct();
 });
